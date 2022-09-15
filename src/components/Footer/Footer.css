@@ -1,14 +1,12 @@
 .footer {
     background-color: gray;
-    padding: 50px;
-    width: 100%;
+    padding: 50px 10px;
     display: flex;
     justify-content: start;
     text-align: left;
 }
 
 ul{
-    width: 100%;
     list-style-type: disc ;
     list-style-position: outside;
 }
