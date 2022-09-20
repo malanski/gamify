@@ -12,6 +12,21 @@ body {
 .App {
   text-align: center;
 }
+.home {
+  width: 90%;
+  padding: 20px;
+  margin: 0 auto;
+}
+.intro-text {
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.site-description {
+  text-align: left;
+  font-size: 20px;
+}
 
 .App-logo {
   height: 40vmin;

@@ -2,11 +2,23 @@
     background-color: gray;
     padding: 50px 10px;
     display: flex;
+    flex-direction: column;
     justify-content: start;
     text-align: left;
 }
 
-ul{
+
+ul {
     list-style-type: disc ;
     list-style-position: outside;
+}
+
+
+hr {
+    border-top: 1px solid black;
+    width: 99%;
+}
+
+p {
+  text-align: center;  
 }
