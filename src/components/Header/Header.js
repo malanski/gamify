@@ -1,6 +1,5 @@
-// import { Button } from '../Button/Button';
 import Button from '@mui/material/Button';
-import './Header.css';
+import './Header.scss';
 
 export function Header() {
     return (
@@ -12,8 +11,7 @@ export function Header() {
           <div className="btn-header">
             <Button fullWidth variant="contained">Entrar</Button>
             <Button fullWidth variant="contained">Cadastrar-se</Button>
-            {/* <Button className="enter-login" text="Entrar"/> */}
-            {/* <Button className="enter-login" text="Cadastrar-se" /> */}
+           
           </div>
         </div>
         

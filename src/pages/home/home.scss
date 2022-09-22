@@ -1,0 +1,33 @@
+
+.home {
+    width: 90%;
+    padding: 20px;
+    margin: 0 auto;
+    .intro-text {
+        text-align: left;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: justify;
+
+    }
+
+    .site-description {
+        text-align: justify;
+        font-size: 20px;
+    }
+    .register {
+        // width: 80%;
+        // margin: 10px auto;
+
+    }
+    .image-home {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .home {
+        width: 95%;
+    }
+}
+  
