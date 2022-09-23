@@ -15,19 +15,15 @@
         text-align: justify;
         font-size: 20px;
     }
-    .register {
-        // width: 80%;
-        // margin: 10px auto;
 
-    }
     .image-home {
         width: 80%;
     }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     .home {
-        width: 95%;
+        width: 99%;
     }
 }
   

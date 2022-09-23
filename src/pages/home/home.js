@@ -1,26 +1,55 @@
 import './home.scss';
 import photo from '../../assets/image/manOnPc.avif';
-import { Button, styled, TextField } from '@mui/material';
-// import { styled } from '@mui/material'
-import theme from '../../components/theme.js'
+import { styled } from '@mui/material/styles'
+import { Button, TextField } from '@mui/material';
+// import { red } from '@mui/material/colors';
+// import makeStyles from '@mui/styles/makeStyles'
+// import { makeStyles } from '@material-ui/core'
+// import { makeStyles } from '@mui/meterial'
+// import { makeStyles } from '@mui/material/styles'
+                        //  @mui\material\styles\
 
+// const useStyles = makeStyles((theme) => ({
+//     textField: {
+//         width: '60%',
+//         [theme.breakpoints.down('xs')]: {
+//             width: '100%'
+//         }
+//     },
+// }));
 const Responsive = styled("div")(({ theme }) => ({
 
-        [theme.breakpoints.up("tablet")]: { 
-            display: 'block',
-            TextField: { width:'100%'}
-
-        },
-
-
-        [theme.breakpoints.up("laptop")]: { 
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center'
+    [theme.breakpoints.down("tablet")]: { 
+        display: 'block',
+        width:'100%',
+        input: { 
+            width:'100%',
+            backgroundColor: 'orange',
         }
-    }))
 
+    },
 
+    [theme.breakpoints.up("tablet")]: { 
+        display: 'block',
+        width:'100%',
+        input: { 
+            width:'100%',
+            backgroundColor: 'red',
+        }
+
+    },
+
+    [theme.breakpoints.up("laptop")]: { 
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        input: { 
+            width:'60%',
+            backgroundColor: 'green',
+            }
+
+    }
+}))
 export function Home() {
 
     return (
@@ -42,19 +71,17 @@ export function Home() {
                 visualizar o andamento do projeto por meio de uma barra de
                 progressão.
             </p>
-
             <div>
-
                 <Responsive>
                     <TextField
                         id="outlined-basic"
                         label="Email"
                         variant="outlined"
-                        fullWidth
+                        
                         sx={{
-                            height: '50px',
+                            width: '70%',
+                            
                             margin: '10px'
-                                
                         }} />
                     <Button
                         sx={{
@@ -65,43 +92,38 @@ export function Home() {
                         Crie a sua conta, é grátis!
                     </Button>
                 </Responsive>
-
-
                 {/* <Box
-                    flexGrow={1}
-                    display={{sm: 'block'}}
-                    sx={{
-                        width: '80%',
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        gap: '20px',
-                        }}>
-                    
-                    <TextField
-                        id="outlined-basic"
-                        label="Email"
-                        variant="outlined"
-                        sx={{ 
-                            width: '60%', 
-                            height: '50px'
-                            }}/>
-
-                    <Button
-                        size='large'
-                        variant="contained">
-                            Crie a sua conta, é grátis!
-                    </Button>
-                </Box> */}
+                        flexGrow={1}
+                        display={{sm: 'block'}}
+                        sx={{
+                            width: '80%',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            gap: '20px',
+                            }}>
+            
+                        <TextField
+                            id="outlined-basic"
+                            label="Email"
+                            variant="outlined"
+                            sx={{
+                                width: '60%',
+                                height: '50px'
+                                }}/>
+                        <Button
+                            size='large'
+                            variant="contained">
+                                Crie a sua conta, é grátis!
+                        </Button>
+                    </Box> */}
             </div>
-
-            <img 
+            <img
                 className='image-home'
-                src={ photo }
+                src={photo}
                 alt="homem trabalhando no computador"
                 title='Imagem ilustrativa'>
             </img>
-
         </div>
     )
 }
