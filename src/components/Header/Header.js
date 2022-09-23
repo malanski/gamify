@@ -48,7 +48,7 @@ export function Header() {
     <Responsive>
       <h1>Nome do Site</h1>
 
-      <div>
+      <div className='header-buttons'>
         <Button  variant="contained">Entrar</Button>
         <Button  variant="contained">Cadastrar-se</Button>
 
