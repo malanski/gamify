@@ -1,6 +1,6 @@
 
 .home {
-    width: 90%;
+    width: 100%;
     padding: 20px;
     margin: 0 auto;
     .intro-text {
@@ -21,9 +21,9 @@
     }
 }
 
-@media (min-width: 768px) {
-    .home {
-        width: 99%;
-    }
-}
+// @media (min-width: 768px) {
+//     .home {
+//         width: 99%;
+//     }
+// }
   

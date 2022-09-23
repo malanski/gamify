@@ -2,21 +2,7 @@ import './home.scss';
 import photo from '../../assets/image/manOnPc.avif';
 import { styled } from '@mui/material/styles'
 import { Button, TextField } from '@mui/material';
-// import { red } from '@mui/material/colors';
-// import makeStyles from '@mui/styles/makeStyles'
-// import { makeStyles } from '@material-ui/core'
-// import { makeStyles } from '@mui/meterial'
-// import { makeStyles } from '@mui/material/styles'
-                        //  @mui\material\styles\
 
-// const useStyles = makeStyles((theme) => ({
-//     textField: {
-//         width: '60%',
-//         [theme.breakpoints.down('xs')]: {
-//             width: '100%'
-//         }
-//     },
-// }));
 const Responsive = styled("div")(({ theme }) => ({
 
     [theme.breakpoints.down("tablet")]: { 
@@ -26,30 +12,26 @@ const Responsive = styled("div")(({ theme }) => ({
             width:'100%',
             backgroundColor: 'orange',
         }
-
     },
-
     [theme.breakpoints.up("tablet")]: { 
         display: 'block',
-        width:'100%',
+        width:'70%',
+        margin: 'auto',
         input: { 
             width:'100%',
             backgroundColor: 'red',
         }
-
     },
-
     [theme.breakpoints.up("laptop")]: { 
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        width:'50%',
         input: { 
-            width:'60%',
+            
             backgroundColor: 'green',
             }
-
-    }
-}))
+    }}))
 export function Home() {
 
     return (
@@ -79,7 +61,7 @@ export function Home() {
                         variant="outlined"
                         
                         sx={{
-                            width: '70%',
+                            width: '80%',
                             
                             margin: '10px'
                         }} />
