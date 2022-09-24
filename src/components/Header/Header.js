@@ -54,11 +54,15 @@ export function Header() {
       <div className='header-buttons'>
 
         <Link title="Entrar" to="/login">
-          <Button sx={{ width: '70%' }} variant="contained">Entrar</Button>
+          <Button sx={{ width: '70%' }}
+            variant="contained">Entrar
+          </Button>
         </Link>
 
         <Link title="Cadastrar-se" to="/register">
-          <Button sx={{ width: '70%' }} variant="contained">Cadastrar-se</Button>
+          <Button sx={{ width: '70%' }}
+            variant="contained">Cadastrar-se
+          </Button>
         </Link>
 
       </div>

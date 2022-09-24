@@ -50,16 +50,30 @@ export function Register() {
     const [values, setValues] = React.useState({
         password: '',
         showPassword: false,
+        confirmPassword: '',
+        showConfirmPassword: false,
     });
 
     const handleChange = (prop) => (event) => {
         setValues({ ...values, [prop]: event.target.value });
+        console.log(values.password)
+    };
+
+    const handleChangeConfirm = (prop) => (event) => {
+        setValues({ ...values, [prop]: event.target.value });
+        console.log(values.confirmPassword)
     };
 
     const handleClickShowPassword = () => {
         setValues({
             ...values,
             showPassword: !values.showPassword,
+        });
+    };
+    const handleClickShowConfirmPassword = () => {
+        setValues({
+            ...values,
+            showConfirmPassword: !values.showConfirmPassword,
         });
     };
 
@@ -115,18 +129,18 @@ export function Register() {
                         <InputLabel htmlFor="filled-adornment-password">Confirmar senha</InputLabel>
                         <FilledInput
                             id="filled-adornment-password"
-                            type={values.showPassword ? 'text' : 'password'}
-                            value={values.password}
-                            onChange={handleChange('password')}
+                            type={values.showConfirmPassword ? 'text' : 'password'}
+                            value={values.confirmPassword}
+                            onChange={handleChange('confirmPassword')}
                             endAdornment={
                                 <InputAdornment position="end">
                                     <IconButton
                                         aria-label="toggle password visibility"
-                                        onClick={handleClickShowPassword}
+                                        onClick={handleClickShowConfirmPassword}
                                         onMouseDown={handleMouseDownPassword}
                                         edge="end"
                                     >
-                                        {values.showPassword ? <VisibilityOff /> : <Visibility />}
+                                        {values.showConfirmPassword ? <VisibilityOff /> : <Visibility />}
                                     </IconButton>
                                 </InputAdornment>
                             }
