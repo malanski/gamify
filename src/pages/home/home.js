@@ -6,33 +6,34 @@ import { Link } from 'react-router-dom';
 
 const Responsive = styled("div")(({ theme }) => ({
 
-    [theme.breakpoints.down("tablet")]: { 
+    [theme.breakpoints.down("tablet")]: {
         display: 'block',
-        width:'100%',
-        input: { 
-            width:'100%',
+        width: '100%',
+        input: {
+            width: '100%',
             backgroundColor: 'orange',
         }
     },
-    [theme.breakpoints.up("tablet")]: { 
+    [theme.breakpoints.up("tablet")]: {
         display: 'block',
-        width:'70%',
+        width: '70%',
         margin: 'auto',
-        input: { 
-            width:'100%',
+        input: {
+            width: '100%',
             backgroundColor: 'red',
         }
     },
-    [theme.breakpoints.up("laptop")]: { 
+    [theme.breakpoints.up("laptop")]: {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        width:'50%',
-        input: { 
-            
+        width: '50%',
+        input: {
+
             backgroundColor: 'green',
-            }
-    }}))
+        }
+    }
+}))
 export function Home() {
 
     return (
@@ -44,6 +45,9 @@ export function Home() {
                 pois de forma simples, gamificada e intuitiva você conseguirá
                 ser mais produtivo.
             </p>
+
+            <br></br>
+
             <p className="site-description">
                 &ensp;&ensp;&ensp;&ensp;
                 Bem vindo, (nome do site) é uma ferramenta que te ajuda no
@@ -54,16 +58,17 @@ export function Home() {
                 visualizar o andamento do projeto por meio de uma barra de
                 progressão.
             </p>
+            <br></br>
             <div>
                 <Responsive>
                     <TextField
                         id="outlined-basic"
                         label="Email"
                         variant="outlined"
-                        
+
                         sx={{
                             width: '80%',
-                            
+
                             margin: '10px'
                         }} />
                     <Link title="Cadastrar-se" to="/register">
@@ -77,31 +82,7 @@ export function Home() {
                         </Button>
                     </Link>
                 </Responsive>
-                {/* <Box
-                        flexGrow={1}
-                        display={{sm: 'block'}}
-                        sx={{
-                            width: '80%',
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            gap: '20px',
-                            }}>
-            
-                        <TextField
-                            id="outlined-basic"
-                            label="Email"
-                            variant="outlined"
-                            sx={{
-                                width: '60%',
-                                height: '50px'
-                                }}/>
-                        <Button
-                            size='large'
-                            variant="contained">
-                                Crie a sua conta, é grátis!
-                        </Button>
-                    </Box> */}
+
             </div>
             <img
                 className='image-home'

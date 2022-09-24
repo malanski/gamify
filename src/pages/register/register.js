@@ -74,7 +74,8 @@ export function Register() {
         <div className="register">
             <div>
                 <Responsive>
-
+                    <h2>Registre-se</h2>
+                    <h3>É grátis!</h3>
                     <TextField
                         id="outlined-basic"
                         label="Nome"
