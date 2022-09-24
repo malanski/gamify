@@ -1,6 +1,7 @@
 import Button from '@mui/material/Button';
 // import './Header.scss';
-import { styled } from '@mui/material/styles'
+import { styled } from '@mui/material/styles';
+import { Link } from 'react-router-dom';
 
 const Responsive = styled('div')(({ theme }) => ({
   [theme.breakpoints.up("mobile")]: {
@@ -14,43 +15,51 @@ const Responsive = styled('div')(({ theme }) => ({
       flexDirection: 'column',
       justifyContent: 'space-between',
       gap: '20px',
-      width:'60%',
+      width: '60%',
       margin: 'auto'
-    } ,
+    },
   },
   [theme.breakpoints.between("tablet")]: {
     display: 'block',
     div: {
-      width:'50%',
-    } ,
+      width: '50%',
+    },
   },
   [theme.breakpoints.up("tablet")]: {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-between', 
+    justifyContent: 'space-between',
     alignItems: 'center',
     div: {
-      width:'30%',
+      width: '30%',
       margin: '0'
-    } , 
+    },
   },
-  [theme.breakpoints.up("desktop")]: { 
+  [theme.breakpoints.up("desktop")]: {
     div: {
-      width:'20%',
+      width: '20%',
       margin: '0'
-    } , 
-}
+    },
+  }
 }));
 
 
 export function Header() {
   return (
     <Responsive>
-      <h1>Nome do Site</h1>
+      <Link title="home" to="/">
+        <h1>Nome do Site</h1>
+      </Link>
 
       <div className='header-buttons'>
-        <Button  variant="contained">Entrar</Button>
-        <Button  variant="contained">Cadastrar-se</Button>
+
+        <Link title="Entrar" to="/login">
+          <Button variant="contained">Entrar</Button>
+        </Link>
+
+        <Link title="Cadastrar-se" to="/register">
+          <Button variant="contained">Cadastrar-se</Button>
+        </Link>
 
       </div>
     </Responsive>

@@ -2,6 +2,7 @@ import './home.scss';
 import photo from '../../assets/image/manOnPc.avif';
 import { styled } from '@mui/material/styles'
 import { Button, TextField } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const Responsive = styled("div")(({ theme }) => ({
 
@@ -65,14 +66,16 @@ export function Home() {
                             
                             margin: '10px'
                         }} />
-                    <Button
-                        sx={{
-                            height: '55px',
-                            margin: '10px',
-                        }}
-                        variant="contained">
-                        Crie a sua conta, é grátis!
-                    </Button>
+                    <Link title="Cadastrar-se" to="/register">
+                        <Button
+                            sx={{
+                                height: '55px',
+                                margin: '10px',
+                            }}
+                            variant="contained">
+                            Crie a sua conta, é grátis!
+                        </Button>
+                    </Link>
                 </Responsive>
                 {/* <Box
                         flexGrow={1}

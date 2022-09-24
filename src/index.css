@@ -7,6 +7,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all ease-in-out 0.9s;
+
+}
+
+a:hover {
+  text-decoration: none;
+  color: blue;
+  transition: all ease-in-out 0.9s;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
