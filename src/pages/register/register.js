@@ -48,10 +48,7 @@ const Responsive = styled("div")(({ theme }) => ({
 export function Register() {
 
     const [values, setValues] = React.useState({
-        amount: '',
         password: '',
-        weight: '',
-        weightRange: '',
         showPassword: false,
     });
 
