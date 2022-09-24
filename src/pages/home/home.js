@@ -34,7 +34,7 @@ const Responsive = styled("div")(({ theme }) => ({
         }
     }
 }))
-export function Home() {
+export function Home({ stateButtons }) {
 
     return (
         <div className="home">
@@ -71,16 +71,19 @@ export function Home() {
 
                             margin: '10px'
                         }} />
+
                     <Link title="Cadastrar-se" to="/register">
                         <Button
                             sx={{
                                 height: '55px',
                                 margin: '10px',
                             }}
+                            onClick={stateButtons}
                             variant="contained">
                             Crie a sua conta, é grátis!
                         </Button>
                     </Link>
+
                 </Responsive>
 
             </div>

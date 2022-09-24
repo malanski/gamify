@@ -44,28 +44,30 @@ const Responsive = styled('div')(({ theme }) => ({
 }));
 
 
-export function Header() {
+export function Header({ showButtons }) {
   return (
     <Responsive>
       <Link title="home" to="/">
         <h1>Nome do Site</h1>
       </Link>
 
-      <div className='header-buttons'>
+      {showButtons &&
+        <div className='header-buttons'>
 
-        <Link title="Entrar" to="/login">
-          <Button sx={{ width: '70%' }}
-            variant="contained">Entrar
-          </Button>
-        </Link>
+          <Link title="Entrar" to="/login">
+            <Button sx={{ width: '70%' }}
+              variant="contained">Entrar
+            </Button>
+          </Link>
 
-        <Link title="Cadastrar-se" to="/register">
-          <Button sx={{ width: '70%' }}
-            variant="contained">Cadastrar-se
-          </Button>
-        </Link>
+          <Link title="Cadastrar-se" to="/register">
+            <Button sx={{ width: '70%' }}
+              variant="contained">Cadastrar-se
+            </Button>
+          </Link>
 
-      </div>
+        </div>
+      }
     </Responsive>
   );
 }
