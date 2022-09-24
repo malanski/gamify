@@ -33,7 +33,8 @@ const Responsive = styled("div")(({ theme }) => ({
             backgroundColor: 'green',
         }
     }
-}))
+}));
+
 export function Home({ stateButtons }) {
 
     return (

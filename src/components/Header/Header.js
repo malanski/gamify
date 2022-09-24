@@ -44,25 +44,31 @@ const Responsive = styled('div')(({ theme }) => ({
 }));
 
 
-export function Header({ showButtons }) {
+export function Header({ showButtons, stateButtons }) {
   return (
     <Responsive>
       <Link title="home" to="/">
-        <h1>Nome do Site</h1>
+        <h1 onClick={stateButtons}>Nome do Site</h1>
       </Link>
 
       {showButtons &&
         <div className='header-buttons'>
 
           <Link title="Entrar" to="/login">
-            <Button sx={{ width: '70%' }}
-              variant="contained">Entrar
+            <Button 
+              sx={{ width: '70%' }}
+              variant="contained"
+              onClick={stateButtons}>
+                Entrar
             </Button>
           </Link>
 
           <Link title="Cadastrar-se" to="/register">
-            <Button sx={{ width: '70%' }}
-              variant="contained">Cadastrar-se
+            <Button 
+              sx={{ width: '70%' }}
+              variant="contained"
+              onClick={stateButtons}>
+                Cadastrar-se
             </Button>
           </Link>
 

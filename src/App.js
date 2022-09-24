@@ -20,9 +20,10 @@ function App() {
 
   const [showButtons, setShowButtons] = useState(true);
 
-  const stateButtons = () =>{
-    setShowButtons(false)
-    console.log(showButtons)
+  const stateButtons = () => {
+    if (showButtons) return setShowButtons(false);
+
+    setShowButtons(true);
   }
 
   return (
@@ -30,7 +31,10 @@ function App() {
       <div className="App">
         <HashRouter>
 
-          <Header showButtons={showButtons}/>
+          <Header 
+            showButtons={showButtons}
+            stateButtons={stateButtons}/>
+            
           <Routes>
             <Route path='/' element={<Home stateButtons={stateButtons} />} />
             <Route path='/login' element={<Login />} />
