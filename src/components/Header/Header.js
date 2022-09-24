@@ -15,7 +15,7 @@ const Responsive = styled('div')(({ theme }) => ({
       flexDirection: 'column',
       justifyContent: 'space-between',
       gap: '20px',
-      width: '60%',
+      width: '100%',
       margin: 'auto'
     },
   },
@@ -54,11 +54,11 @@ export function Header() {
       <div className='header-buttons'>
 
         <Link title="Entrar" to="/login">
-          <Button variant="contained">Entrar</Button>
+          <Button sx={{ width: '70%' }} variant="contained">Entrar</Button>
         </Link>
 
         <Link title="Cadastrar-se" to="/register">
-          <Button variant="contained">Cadastrar-se</Button>
+          <Button sx={{ width: '70%' }} variant="contained">Cadastrar-se</Button>
         </Link>
 
       </div>

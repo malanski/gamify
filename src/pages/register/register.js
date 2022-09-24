@@ -138,6 +138,7 @@ export function Register() {
                     <Link title="Cadastrar-se" to="/projetos">
                         <Button
                             sx={{
+                                width: '50%',
                                 height: '55px',
                                 margin: '10px',
                                 padding: '20px'
