@@ -1,28 +1,28 @@
 import './login.scss';
+
+// Libraries
+import { Link } from 'react-router-dom';
+
+// Components
 import { styled } from '@mui/material/styles'
 import { Button, FilledInput, FormControl, IconButton, InputAdornment, InputLabel, TextField } from '@mui/material';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import { Link } from 'react-router-dom';
 
 import React from 'react';
 
 const Responsive = styled("div")(({ theme }) => ({
-
     [theme.breakpoints.up("mobile")]: {
         display: 'block',
-
         border: '1px solid',
         borderColor: 'black',
         borderRadius: '20px',
-
     },
     [theme.breakpoints.down("tablet")]: {
         width: '100%',
         border: '1px solid',
         borderColor: 'black',
         borderRadius: '20px',
-
         input: {
             width: '100%',
             backgroundColor: 'orange',
@@ -37,10 +37,8 @@ const Responsive = styled("div")(({ theme }) => ({
         }
     },
     [theme.breakpoints.up("laptop")]: {
-
         width: '50%',
         input: {
-
             backgroundColor: 'green',
         }
     }
@@ -67,8 +65,6 @@ export function Login() {
             <div>
                 <Responsive>
                 <h2>Login</h2>
-
-
                     <TextField
                         id="outlined-basic"
                         label="Nome ou Email"
@@ -77,7 +73,9 @@ export function Login() {
                             width: '80%',
                             margin: '10px'
                         }} />
-                    <FormControl sx={{ m: 1, width: '70%' }} variant="filled">
+                    <FormControl
+                        sx={{ m: 1, width: '70%' }}
+                        variant="filled">
                         <InputLabel htmlFor="filled-adornment-password">Senha</InputLabel>
                         <FilledInput
                             id="filled-adornment-password"

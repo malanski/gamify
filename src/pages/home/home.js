@@ -1,7 +1,11 @@
 import './home.scss';
 import photo from '../../assets/image/manOnPc.avif';
-import { styled } from '@mui/material/styles'
+
+// Components
 import { Button, TextField } from '@mui/material';
+
+// Libraries
+import { styled } from '@mui/material/styles'
 import { Link } from 'react-router-dom';
 
 const Responsive = styled("div")(({ theme }) => ({

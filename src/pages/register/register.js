@@ -1,28 +1,37 @@
 import './register.scss';
-import { styled } from '@mui/material/styles'
-import { Button, FilledInput, FormControl, IconButton, InputAdornment, InputLabel, TextField } from '@mui/material';
-import Visibility from '@mui/icons-material/Visibility';
-import VisibilityOff from '@mui/icons-material/VisibilityOff';
+
+// Libraries
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-import React from 'react';
+// Components
+import { styled } from '@mui/material/styles'
+import {
+    Button,
+    FilledInput,
+    FormControl,
+    IconButton,
+    InputAdornment,
+    InputLabel,
+    TextField
+} from '@mui/material';
+import Visibility from '@mui/icons-material/Visibility';
+import VisibilityOff from '@mui/icons-material/VisibilityOff';
+
+
 
 const Responsive = styled("div")(({ theme }) => ({
-
     [theme.breakpoints.up("mobile")]: {
         display: 'block',
-
         border: '1px solid',
         borderColor: 'black',
         borderRadius: '20px',
-
     },
     [theme.breakpoints.down("tablet")]: {
         width: '100%',
         border: '1px solid',
         borderColor: 'black',
         borderRadius: '20px',
-
         input: {
             width: '100%',
             backgroundColor: 'orange',
@@ -37,16 +46,14 @@ const Responsive = styled("div")(({ theme }) => ({
         }
     },
     [theme.breakpoints.up("laptop")]: {
-
         width: '50%',
         input: {
-
             backgroundColor: 'green',
         }
     }
 }))
-export function Register() {
 
+export function Register() {
     const [values, setValues] = React.useState({
         password: '',
         showPassword: false,
@@ -103,8 +110,12 @@ export function Register() {
                             width: '80%',
                             margin: '10px'
                         }} />
-                    <FormControl sx={{ m: 1, width: '70%' }} variant="filled">
-                        <InputLabel htmlFor="filled-adornment-password">Senha</InputLabel>
+                    <FormControl
+                        sx={{ m: 1, width: '70%' }}
+                        variant="filled">
+                        <InputLabel htmlFor="filled-adornment-password">
+                            Senha
+                        </InputLabel>
                         <FilledInput
                             id="filled-adornment-password"
                             type={values.showPassword ? 'text' : 'password'}
@@ -125,7 +136,9 @@ export function Register() {
                         />
                     </FormControl>
                     <br></br>
-                    <FormControl sx={{ m: 1, width: '70%' }} variant="filled">
+                    <FormControl
+                        sx={{ m: 1, width: '70%' }}
+                        variant="filled">
                         <InputLabel htmlFor="filled-adornment-password">Confirmar senha</InputLabel>
                         <FilledInput
                             id="filled-adornment-password"
