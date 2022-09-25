@@ -7,9 +7,10 @@ export function Projetos() {
 
     return (
         <div className="projetos">
-            <h2>Projetos</h2>
+            <h2>Meus Projetos</h2>
+            <br />
 
-            {/* <Grid container spacing={3} >
+            <Grid container spacing={3} >
 
                     <Grid item xs={6}>
                         <CardProjetos />
@@ -19,14 +20,14 @@ export function Projetos() {
                         <CardCriaProjetos />
                     </Grid>
 
-            </Grid> */}
-            <div className='cards'>
+            </Grid>
+            {/* <div className='cards'>
 
                 <CardProjetos />
 
-                {/* <CardCriaProjetos /> */}
+                <CardCriaProjetos />
 
-            </div>
+            </div> */}
 
 
         </div>
