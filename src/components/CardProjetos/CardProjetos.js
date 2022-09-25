@@ -61,7 +61,8 @@ export function CardProjetos() {
           component="img"
           height="194"
           image={projetoPhoto}
-          alt="Paella dish"
+          alt="Projeto na prática"
+          title="Entrar no projeto"
         />
       </Link>
       <CardContent>
