@@ -19,6 +19,7 @@ import projetoPhoto from '../../assets/image/projetoImage.jpg';
 
 import DeleteIcon from '@mui/icons-material/Delete';
 import { BarraProgresso } from '../BarraProgresso';
+import { Link } from 'react-router-dom';
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -51,18 +52,18 @@ export function CardProjetos() {
             <MoreVertIcon />
             <DeleteIcon />
           </IconButton>
-
         }
         title="Projeto Um"
         subheader={"Inicio: September 14, 2016" + "\n" + "Prazo: September 14, 2016"}
-
       />
-      <CardMedia
-        component="img"
-        height="194"
-        image={projetoPhoto}
-        alt="Paella dish"
-      />
+      <Link to="/detalhes">
+        <CardMedia
+          component="img"
+          height="194"
+          image={projetoPhoto}
+          alt="Paella dish"
+        />
+      </Link>
       <CardContent>
         <Typography variant="body2" color="text.secondary">
           Lorem ipsum dolor sit amet, consectetur adipiscing

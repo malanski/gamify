@@ -17,6 +17,7 @@ import { Footer } from './components/Footer';
 
 import { theme } from './styles/styles'
 import { useState } from 'react';
+import { Detalhes } from './pages/detalhes';
 
 function App() {
   const [showButtons, setShowButtons] = useState(true);
@@ -53,6 +54,12 @@ function App() {
               path='/projetos' 
               element={
                 <Projetos 
+                  stateButtons={stateButtons} 
+                  stateExitButtons={stateExitButtons}/>} />
+            <Route 
+              path='/detalhes' 
+              element={
+                <Detalhes 
                   stateButtons={stateButtons} 
                   stateExitButtons={stateExitButtons}/>} />
             <Route

@@ -1,0 +1,51 @@
+
+.detalhes {
+    width: 100%;
+    margin: 0 auto;
+    .detalhes-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;padding: 20px;    }
+
+    .tempo {
+        padding: 20px;
+        width: 100%;
+        margin: 20px auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .projeto-header     {
+        width: 100%;
+        padding: 20px;
+        margin: 0 auto;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: grey;
+        .lista-title {
+            width: 30%;
+            text-align: left;
+            font-weight: bold;
+            font-size: 25px;
+        }
+    }
+    .lista-tarefas {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .detalhes {
+        .projeto-header {
+            flex-direction: column-reverse;
+            .lista-title {
+                width: 100%;
+
+            }
+        }
+    }
+}
