@@ -24,13 +24,12 @@ function App() {
   const stateButtons = () => {
     if (showButtons) return setShowButtons(false);
     setShowButtons(true);
-    console.log(showButtons)
   }
   
   const [showExitButtons, setShowExitButtons] = useState(false);
   const stateExitButtons = () => {
-    if (showExitButtons) return setShowExitButtons(true);
-    setShowExitButtons(false);
+    if (showExitButtons) return setShowExitButtons(false);
+    setShowExitButtons(true);
     console.log(showExitButtons)
   }
 
@@ -49,13 +48,11 @@ function App() {
               element={<Home stateButtons={stateButtons} />} />
             <Route 
               path='/login'
-              element={<Login />} />
+              element={<Login stateExitButtons={stateExitButtons} />} />
             <Route 
               path='/projetos' 
               element={
-                <Projetos 
-                  stateButtons={stateButtons} 
-                  stateExitButtons={stateExitButtons}/>} />
+                <Projetos stateButtons={stateButtons} />} />
             <Route 
               path='/detalhes' 
               element={

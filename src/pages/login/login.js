@@ -43,7 +43,7 @@ const Responsive = styled("div")(({ theme }) => ({
         }
     }
 }))
-export function Login() {
+export function Login({ stateExitButtons }) {
     const [values, setValues] = React.useState({
         password: '',
         showPassword: false,
@@ -64,7 +64,7 @@ export function Login() {
         <div className="login">
             <div>
                 <Responsive>
-                <h2>Login</h2>
+                    <h2>Login</h2>
                     <TextField
                         id="outlined-basic"
                         label="Nome ou Email"
@@ -99,6 +99,8 @@ export function Login() {
                     <br></br>
                     <Link title="Cadastrar-se" to="/projetos">
                         <Button
+                            onClick={stateExitButtons}
+
                             sx={{
                                 height: '55px',
                                 margin: '10px',

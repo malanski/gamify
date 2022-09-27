@@ -160,7 +160,7 @@ export function Register() {
                         />
                     </FormControl>
                     <br></br>
-                    <Link title="Cadastrar-se" to="/projetos">
+                    <Link title="Cadastrar-se" to="/login">
                         <Button
                             sx={{
                                 width: '50%',
@@ -169,7 +169,7 @@ export function Register() {
                                 padding: '20px'
                             }}
                             variant="contained">
-                            Entrar
+                            Cadastrar
                         </Button>
                     </Link>
                 </Responsive>

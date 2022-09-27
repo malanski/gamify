@@ -60,6 +60,7 @@ const Responsive = styled('div')(({ theme }) => ({
 
 
 export function Header({ showButtons, stateButtons, showExitButtons, stateExitButtons }) {
+  
   return (
     <Responsive>
       <Link title="home" to="/">
