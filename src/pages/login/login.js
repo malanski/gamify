@@ -1,4 +1,5 @@
 import './login.scss';
+import { useState } from 'react';
 
 // Libraries
 import { Link } from 'react-router-dom';
@@ -43,8 +44,9 @@ const Responsive = styled("div")(({ theme }) => ({
         }
     }
 }))
+
 export function Login({ stateExitButtons }) {
-    const [values, setValues] = React.useState({
+    const [values, setValues] = useState({
         password: '',
         showPassword: false,
     });
@@ -99,13 +101,12 @@ export function Login({ stateExitButtons }) {
                     <br></br>
                     <Link title="Cadastrar-se" to="/projetos">
                         <Button
-                            onClick={stateExitButtons}
-
                             sx={{
                                 height: '55px',
                                 margin: '10px',
                                 padding: '20px'
                             }}
+                            onClick={stateExitButtons}
                             variant="contained">
                             Entrar
                         </Button>

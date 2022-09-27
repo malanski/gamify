@@ -59,14 +59,26 @@ const Responsive = styled('div')(({ theme }) => ({
 }));
 
 
-export function Header({ showButtons, stateButtons, showExitButtons, stateExitButtons }) {
-  
+export function Header(props) {
+
+  const { showButtons, stateButtons, exitButtons, stateExitButtons } = props;
+
+  const changeButtons = () => {
+    stateButtons();
+    stateExitButtons();
+  }
+
   return (
     <Responsive>
-      <Link title="home" to="/">
-        <h1 onClick={stateButtons}>Nome do Site</h1>
-      </Link>
-
+      {exitButtons ? 
+        <h1>
+          Walker Lobato
+        </h1>        
+        :
+        <Link title="home" to="/">
+          <h1 onClick={stateButtons}>Nome do Site</h1>
+        </Link>
+      }
       {showButtons &&
         <div className='header-buttons'>
           <Link title="Entrar" to="/login">
@@ -85,30 +97,26 @@ export function Header({ showButtons, stateButtons, showExitButtons, stateExitBu
               Cadastrar-se
             </Button>
           </Link>
-
-
-          {showExitButtons &&
+        </div>}
+        {exitButtons &&
             <div>
-              <Link title="Cadastrar-se" to="/register">
+              <Link title="Cadastrar-se" to="/login">
                 <Button
+                  onClick={stateExitButtons}
                   sx={{ width: '70%' }}
-                  variant="contained"
-                  onClick={stateExitButtons}>
+                  variant="contained">
                   Trocar Usuário
                 </Button>
               </Link>
               <Link title="Cadastrar-se" to="/">
                 <Button
+                  onClick={changeButtons}
                   sx={{ width: '70%' }}
-                  variant="contained"
-                  onClick={stateExitButtons}>
+                  variant="contained">
                   Sair
                 </Button>
               </Link>
-            </div>
-            }
-        </div>
-      }
+            </div>}
     </Responsive>
   );
 }

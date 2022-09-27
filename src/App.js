@@ -21,16 +21,16 @@ import { Detalhes } from './pages/detalhes';
 
 function App() {
   const [showButtons, setShowButtons] = useState(true);
+  const [exitButtons, setExitButtons] = useState(false);
+  
   const stateButtons = () => {
     if (showButtons) return setShowButtons(false);
     setShowButtons(true);
   }
   
-  const [showExitButtons, setShowExitButtons] = useState(false);
   const stateExitButtons = () => {
-    if (showExitButtons) return setShowExitButtons(false);
-    setShowExitButtons(true);
-    console.log(showExitButtons)
+    if (exitButtons) return setExitButtons(false);
+    setExitButtons(true);
   }
 
   return (
@@ -39,7 +39,7 @@ function App() {
         <HashRouter>
           <Header
             showButtons={showButtons}
-            showExitButtons={showExitButtons}
+            exitButtons={exitButtons}
             stateButtons={stateButtons}
             stateExitButtons={stateExitButtons} />
           <Routes>
@@ -56,9 +56,7 @@ function App() {
             <Route 
               path='/detalhes' 
               element={
-                <Detalhes 
-                  stateButtons={stateButtons} 
-                  stateExitButtons={stateExitButtons}/>} />
+                <Detalhes />} />
             <Route
               path='/register'
               element={<Register />} />

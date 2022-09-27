@@ -63,12 +63,6 @@ export function Register() {
 
     const handleChange = (prop) => (event) => {
         setValues({ ...values, [prop]: event.target.value });
-        console.log(values.password)
-    };
-
-    const handleChangeConfirm = (prop) => (event) => {
-        setValues({ ...values, [prop]: event.target.value });
-        console.log(values.confirmPassword)
     };
 
     const handleClickShowPassword = () => {
